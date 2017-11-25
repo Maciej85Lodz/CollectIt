@@ -10,25 +10,23 @@ namespace CollectIt
     {
         static void Main(string[] args)
         {
-            Employee[] employees = new Employee[]
-            {
-                new Employee { Name = "Scott"},
-                new Employee { Name = "Alex"},
-                new Employee { Name = "Maciej"},
-                new Employee { Name = "Wojciech"},
-                new Employee { Name = "Natalia"},
-                new Employee { Name = "Marysia"}
-            };
+            LinkedList<int> list = new LinkedList<int>();
+            list.AddFirst(2);
+            list.AddFirst(3);
 
-            foreach (var employee in employees)
+            var first = list.First;
+            list.AddAfter(first, 5);
+            list.AddBefore(first, 10);
+
+            var node = list.First;
+            while (node != null)
             {
-                Console.WriteLine(employee.Name);
+                Console.WriteLine(node.Value);
+                node = node.Next;
+                Console.ReadLine();
             }
-            for (int i = 0; i< employee.Lenght; i++)
-            {
-                Console.WriteLine(employees[i].Name);
-            }
-            
+                
         }
-    }
+    } 
 }
+

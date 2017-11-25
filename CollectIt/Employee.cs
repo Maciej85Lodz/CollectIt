@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CollectIt
 {
-    class Employee
+    public class Employee
     {
+        public string Name { get; set; }
+        public int DepartmentId { get; set; }
     }
 }
+
