@@ -10,22 +10,20 @@ namespace CollectIt
     {
         static void Main(string[] args)
         {
-            LinkedList<int> list = new LinkedList<int>();
-            list.AddFirst(2);
-            list.AddFirst(3);
+            var emploeesByName = new Dictionary<string, Employee>();
 
-            var first = list.First;
-            list.AddAfter(first, 5);
-            list.AddBefore(first, 10);
+            emploeesByName.Add("Scott", new Employee { Name = "Scott" });
+            emploeesByName.Add("Maciej", new Employee { Name = "Maciej" });
+            emploeesByName.Add("Alex", new Employee { Name = "Alex" });
 
-            var node = list.First;
-            while (node != null)
+            var scott = emploeesByName["Maciej"];
+            foreach(var item in emploeesByName)
             {
-                Console.WriteLine(node.Value);
-                node = node.Next;
-                Console.ReadLine();
+                Console.WriteLine("{0}:{1}", item.Key, item.Value.Name);
+                Console.ReadKey();
             }
-                
+
+
         }
     } 
 }

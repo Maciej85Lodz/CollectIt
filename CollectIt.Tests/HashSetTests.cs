@@ -41,7 +41,7 @@ namespace CollectIt.Tests
 
             set1.SymmetricExceptWith(set2);
 
-            Assert.IsTrue(set1.SetEquals(new[] { 1, 4));
+            Assert.IsTrue(set1.SetEquals(new[] { 1, 4 }));
         }
     }
 }
